@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Fiverr add friends from groupe",
+  "version": "0.1.0",
+  "description": "Add friends from facebook groupe",
+"background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    
+    "default_popup": "background.html"
+  },
+  
+  "content_scripts": [{
+    "js": [ "jquery.min.js", "contents.js" ],
+    "matches": [ "https://www.facebook.com/groups/*/","https://www.facebook.com/groups/*"]
+  }],
+  "permissions": [
+    "tabs"
+  ]
+
+}
